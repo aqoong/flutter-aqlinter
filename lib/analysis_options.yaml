@@ -11,9 +11,7 @@ analyzer:
 
 linter:
   rules:
-    - sort_child_properties_last
     - avoid_redundant_argument_values
-    - prefer_const_constructors_in_immutables
     - unnecessary_parenthesis
     - always_use_package_imports
     - prefer_single_quotes
