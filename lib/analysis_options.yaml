@@ -13,12 +13,11 @@ linter:
   rules:
     - sort_child_properties_last
     - avoid_redundant_argument_values
-    - constant_identifier_names
-    - curly_braces_in_flow_control_structures
-    - exhaustive_cases
-    - file_names
-    - library_prefixes
-    - non_constant_identifier_names
-    - null_check_on_nullable_type_parameter
     - prefer_const_constructors_in_immutables
-    - prefer_contains
+    - unnecessary_parenthesis
+    - always_use_package_imports
+    - prefer_single_quotes
+    - require_trailing_commas
+    - always_put_required_named_parameters_first
+    - always_declare_return_types
+    - lines_longer_than_80_chars
