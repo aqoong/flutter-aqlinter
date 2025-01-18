@@ -1,6 +1,7 @@
 name: aqlinter
 description: "This is AQoong's favorit linter set"
 version: 1.0.0
+homepage: "https://aqoong.site"
 
 environment:
   sdk: ^3.0.0
@@ -17,3 +18,5 @@ dev_dependencies:
 
 topics:
   - lints
+
+license: MIT
