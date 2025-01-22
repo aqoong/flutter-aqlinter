@@ -1,12 +1,19 @@
 # aqlinter
 
 A Flutter lints configuration package that combines `flutter_lints` and `analyzer` for enhanced linting and static analysis.
+Note the available version of the flutter for reasons of dependence within the `analyzer` and `flutter_lints` package.
 
 ## Features
 
 - Centralized lint rules and analysis configurations.
 - Easy-to-use setup with `aqlinter.yaml`.
 - Supports custom lint rules for teams and projects.
+
+### Versions
+| **Package Version** | **Flutter Version** | **Dependencies**  |
+|:-------------------:|:-------------------:|:------------------|
+| 1.0.1 | >= 3.19.0 | flutter_lints: ^4.0.0<br>analyzer: ^6.4.1 |
+
 
 ## Getting Started
 
