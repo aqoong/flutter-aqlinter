@@ -15,4 +15,17 @@ A Flutter lints configuration package that combines `flutter_lints` and `analyze
 Add `aqlinter` to your project:
 ```bash
 flutter pub add aqlinter
+```
 
+### Usage
+
+Create an analysis_options.yaml file at the root of the package
+
+`analysis_options.yaml` file
+```
+include: package:aqlinter/aqlinter.yaml
+
+linter:
+    rules:
+        # You can enter additional rules that you want.
+```
