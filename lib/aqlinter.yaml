@@ -4,10 +4,10 @@ include: package:flutter_lints/flutter.yaml
 
 analyzer:
   exclude:
-    — “build/**”
-    — “**/*.g.dart”
-    — “**/*.gen.dart”
-    — “**/*.freezed.dart”
+    - build/**
+    - "**/*.g.dart"
+    - "**/*.gen.dart"
+    - "**/*.freezed.dart"
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
@@ -22,3 +22,4 @@ linter:
     - always_put_required_named_parameters_first
     - always_declare_return_types
     - lines_longer_than_80_chars
+    - unnecessary_breaks
