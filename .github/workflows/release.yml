@@ -61,30 +61,3 @@ jobs:
             ${{ env.CHANGELOG }}
           draft: false
           prerelease: false
-
-  publish:
-    if: github.repository_owner == 'aqoong'
-    name: Publish to pub.dev
-    needs: release
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Dart
-        uses: dart-lang/setup-dart@v1
-        with:
-          sdk: stable
-
-      - name: Install dependencies
-        run: dart pub get
-
-      - name: Validate package before publishing
-        run: dart pub publish --dry-run
-
-      - name: Publish package to pub.dev
-        run: dart pub publish --force
-
