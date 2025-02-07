@@ -1,25 +1,57 @@
-/// This code used the example code of flutter_lints as it is.
-/// https://github.com/flutter/packages/blob/main/packages/flutter_lints/example/lib/main.dart
+import 'package:flutter/material.dart';
+
 void main() {
-  const String partOne = 'Hello';
-  const String partTwo = 'World';
-
-  // The following syntax deactivates a lint on a per-line bases:
-  print('$partOne $partTwo'); // ignore: avoid_print
+  runApp(const MyApp());
 }
 
-abstract class Base {
-  int methodA(int foo);
-  String methodB(String foo);
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
 }
 
-// Normally, the parameter renaming from `foo` to `bar` in this class would
-// trigger the `avoid_renaming_method_parameters` lint, but it has been
-// deactivated for the file with the `ignore_for_file` comment above.
-class Sub extends Base {
+class _MyAppState extends State<MyApp> {
   @override
-  int methodA(int bar) => bar;
+  void initState() {
+    super.initState();
+  }
 
   @override
-  String methodB(String bar) => bar;
+  Widget build(BuildContext context) {
+    const text =
+        '안녕하세요.dfdsafdsafsd dsff next time.\nplugin example app test Nice Weather in Earth. 입니다!';
+    const style = TextStyle(
+      fontSize: 50,
+      overflow: TextOverflow.fade,
+      color: Colors.black,
+      fontWeight: FontWeight.w800,
+    );
+
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Plugin example app'),
+        ),
+        body: const SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 200,
+                height: 200,
+                child: Text(
+                  text,
+                  maxLines: 5,
+                  textAlign: TextAlign.left,
+                  style: style,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
