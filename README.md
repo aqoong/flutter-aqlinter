@@ -1,6 +1,6 @@
 # aqlinter
 
-A Flutter lints configuration package that combines `flutter_lints` and `analyzer` for enhanced linting and static analysis.
+A Flutter lints configuration package that combines [flutter_lints](https://pub.dev/packages/flutter_lints) and [analyzer](https://pub.dev/packages/analyzer) for enhanced linting and static analysis.
 Note the available version of the flutter for reasons of dependence within the `analyzer` and `flutter_lints` package.
 
 ## Features
@@ -12,7 +12,8 @@ Note the available version of the flutter for reasons of dependence within the `
 ### Versions
 | **Package Version** | **Flutter Version** | **Dependencies**  |
 |:-------------------:|:-------------------:|:------------------|
-| 1.0.1 | >= 3.19.0 | flutter_lints: ^4.0.0<br>analyzer: ^6.4.1 |
+| 1.x | >= 3.19.0 | flutter_lints: ^4.0.0<br>analyzer: ^6.4.1 |
+| 2.x | >= 3.24.0 | flutter_lints: ^5.0.0<br>analyzer: ^7.3.0 |
 
 
 ## Getting Started
