@@ -18,3 +18,10 @@ Modified to support the latest version.
 * flutter_lints: ^5.0.0
 * analyzer: ^6.7.0
 _Android Gradle 8.1.0 or 8.3.0_
+
+## 2.1.0
+Modified to support the latest version.
+* Flutter >= 3.27.0
+* Dart >= 3.5.0
+* flutter_lints: ^5.0.0
+* analyzer: ^7.3.0
