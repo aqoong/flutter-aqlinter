@@ -4,7 +4,6 @@ This package is a custom linter based on [flutter_lints](https://pub.dev/package
 
 ## Features
 
-- Centralized lint rules and analysis configurations.
 - Easy-to-use setup with `aqlinter.yaml`.
 - Supports custom lint rules for teams and projects.
 
