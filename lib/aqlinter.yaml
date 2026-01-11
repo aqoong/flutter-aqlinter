@@ -11,15 +11,38 @@ analyzer:
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    todo: ignore
+    missing_required_param: error
+    missing_return: error
+    parameter_assignments: warning
 
 linter:
   rules:
-    - avoid_redundant_argument_values
-    - unnecessary_parenthesis
-    - always_use_package_imports
-    - prefer_single_quotes
-    - require_trailing_commas
-    - always_put_required_named_parameters_first
-    - always_declare_return_types
-    - lines_longer_than_80_chars
-    - unnecessary_breaks
+    # [스타일 - 코드의 일관성과 가독성]
+    - prefer_single_quotes                      # 큰따옴표 대신 작은따옴표 사용
+    - require_trailing_commas                   # 가독성을 위한 마지막 쉼표 강제
+    - always_put_required_named_parameters_first # 필수 매개변수를 맨 앞으로
+    - always_declare_return_types               # 반환 타입 명시
+    - lines_longer_than_80_chars                # 한 줄이 너무 길어지지 않게 제한
+    - unnecessary_breaks                        # switch문에서 불필요한 break 제거
+    - unnecessary_parenthesis                   # 불필요한 괄호 제거
+    - sort_child_properties_last                # child 속성을 마지막에 배치
+    - directives_ordering                       # 임포트 순서 정렬 (dart -> package -> relative)
+
+    # [에러 방지 - 잠재적 버그와 부작용 차단]
+    - unawaited_futures                         # 비동기 처리를 명시적으로 확인
+    - always_use_package_imports                # 일관된 임포트 경로 사용 (상대경로 혼용 방지)
+    - avoid_web_libraries_in_flutter            # 모바일 환경에서 웹 라이브러리 참조 방지
+    - parameter_assignments                     # 매개변수 재할당 방지 (불변성 유지)
+    - avoid_redundant_argument_values           # 기본값과 동일한 인자 전달 방지
+
+    # [최적화 - 성능 및 메모리 효율]
+    - prefer_final_locals                       # 변하지 않는 지역 변수는 final로
+    - prefer_final_in_for_each                  # for-in 루프 변수도 final로 선언
+    - prefer_const_constructors                 # 위젯 재빌드 방지를 위한 const 사용
+    - avoid_unnecessary_containers              # 불필요한 Container 위젯 제거
