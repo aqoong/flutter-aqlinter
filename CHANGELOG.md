@@ -25,3 +25,9 @@ Modified to support the latest version.
 * Dart >= 3.5.0
 * flutter_lints: ^5.0.0
 * analyzer: ^7.3.0
+
+## 3.0.0
+Remove analyzer package
+* Flutter >= 3.24.0
+* Dart >= 3.5.0
+* flutter_lints: ^5.0.0
